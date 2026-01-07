@@ -16,6 +16,6 @@ def check_player_trend(player_name):
         trend = "Heating Up"
     elif last_avg - season_avg <= -3.0:
         trend = "Slumping"
-    return {"player": player_name, "season_ppg": round(float(season_avg), 1), "recent_ppg": round(float(last_avg), 1), "diff": round(float(last_avg - season_avg), 1), "status": trend}
+    return {"player": player_name, "all_point_totals": df['PTS'].tolist(), "season_ppg": round(float(season_avg), 1), "recent_ppg": round(float(last_avg), 1), "diff": round(float(last_avg - season_avg), 1), "status": trend}
 
 
